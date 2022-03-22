@@ -17,6 +17,7 @@ class QuestionModelTests(TestCase):
         future_question = Question(pub_date=time)
         self.assertIs(future_question.was_published_recently(), False)
 
+
 def create_question(question_text, days):
     """
     Create a question with the given `question_text` and published the
@@ -83,6 +84,7 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             [question2, question1],
         )
+
 
 class QuestionDetailViewTests(TestCase):
     def test_future_question(self):
