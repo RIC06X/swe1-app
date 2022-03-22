@@ -15,7 +15,7 @@ install:
 script:
   - python -m black --check .
   - python -m flake8 .
-  - python -m coverage run --source='.' manage.py test
+  - python -m coverage run --source=. manage.py test
 
 after_script:
   - coveralls
